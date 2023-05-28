@@ -1,0 +1,25 @@
+.stat_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #777;
+}
+
+.stat_box.increase {
+  color: green;
+}
+
+.stat_box.decrease {
+  color: red;
+}
+
+.stat_box i {
+  display: flex;
+  align-items: center;
+}
+
+.stat_box span:first-of-type {
+  margin-right: 5px;
+}

@@ -1,0 +1,98 @@
+.top_bar {
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.top_bar .toggle_button {
+  margin-right: 5px;
+}
+
+.top_bar .search_input form {
+  padding: 5px 10px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.top_bar .search_input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.top_bar_actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.top_bar_actions .top_bar_action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.top_bar_actions .top_bar_action:hover {
+  color: #000;
+}
+
+.top_bar_actions .top_bar_action i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_bar_actions .avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.top_bar_actions .avatar img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 767px) {
+  .top_bar_actions .top_bar_action {
+    width: 30px;
+    height: 30px;
+  }
+
+  .top_bar_actions .top_bar_action span {
+    display: none;
+  }
+}
+
+@media (max-width: 567px) {
+  .top_bar .search_input form {
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .top_bar .search_input input {
+    display: none;
+  }
+}

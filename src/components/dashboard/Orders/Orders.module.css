@@ -1,0 +1,9 @@
+.chart_wrapper {
+  height: 155px;
+}
+
+@media (max-width: 567px) {
+  .chart_wrapper {
+    height: 190px;
+  }
+}

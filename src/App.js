@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import SideBar from "./components/global/Sidebar";
+import Topbar from "./components/global/Topbar";
+import DashboardPage from "./pages/dashboard";
+
+import { Routes, Route } from "react-router-dom";
 
 function App() {
+  const [sidebarIsToggled, setSidebarIsToggled] = useState(false);
+  const [sidebarIsBroken, setSidebarIsBroken] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarIsToggled(!sidebarIsToggled);
+  };
+
+  console.log(window.location.pathname);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <SideBar
+        sidebarIsToggled={sidebarIsToggled}
+        setSidebarIsToggled={setSidebarIsToggled}
+        setSidebarIsBroken={setSidebarIsBroken}
+      />
+      <main>
+        <Topbar
+          sidebarIsBroken={sidebarIsBroken}
+          toggleSidebar={toggleSidebar}
+        />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<DashboardPage />} />
+          </Routes>
+        </div>
+      </main>
     </div>
   );
 }

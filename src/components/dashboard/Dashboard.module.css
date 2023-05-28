@@ -1,0 +1,131 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 15px;
+}
+
+.orders_and_payments {
+  grid-column: span 5;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 15px;
+}
+
+.orders_and_payments .orders,
+.orders_and_payments .average_value {
+  grid-column: span 6;
+}
+
+.orders_and_payments .statistics {
+  grid-column: span 12;
+  display: flex;
+  gap: 15px;
+}
+
+.orders_and_payments .card_payments,
+.orders_and_payments .online_orders {
+  width: 30%;
+}
+
+.orders_and_payments .cutomer_satisfaction {
+  width: 40%;
+}
+
+.target_and_inventory {
+  grid-column: span 7;
+  display: flex;
+  gap: 15px;
+}
+
+.target {
+  width: 65%;
+}
+
+.inventory_and_margins {
+  width: 35%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 1800px) {
+  .orders_and_payments {
+    grid-column: span 5;
+  }
+
+  .target {
+    grid-column: span 5;
+  }
+}
+
+@media (max-width: 1500px) {
+  .orders_and_payments {
+    grid-column: span 12;
+  }
+
+  .target_and_inventory {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .target {
+    width: auto;
+    grid-column: span 8;
+  }
+
+  .inventory_and_margins {
+    width: auto;
+    grid-column: span 4;
+  }
+
+  .orders_and_payments .statistics {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .orders_and_payments .card_payments,
+  .orders_and_payments .online_orders,
+  .orders_and_payments .cutomer_satisfaction {
+    width: auto;
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 767px) {
+  .target {
+    grid-column: span 12;
+  }
+
+  .inventory_and_margins {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .orders_and_payments .card_payments,
+  .orders_and_payments .online_orders {
+    grid-column: span 6;
+  }
+
+  .orders_and_payments .cutomer_satisfaction {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 567px) {
+  .orders_and_payments .orders,
+  .orders_and_payments .average_value {
+    grid-column: span 12;
+  }
+
+  .orders_and_payments .card_payments,
+  .orders_and_payments .online_orders {
+    grid-column: span 12;
+  }
+
+  .inventory_and_margins {
+    grid-template-columns: 1fr;
+  }
+}

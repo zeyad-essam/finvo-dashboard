@@ -1,0 +1,25 @@
+.values_view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.values_view div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.values_view h3 span {
+  font-size: 15px;
+  color: #6d6d6d;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .values_view {
+    margin-top: 5px;
+    gap: 10px;
+  }
+}
