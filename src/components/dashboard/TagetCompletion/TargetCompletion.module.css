@@ -1,0 +1,81 @@
+.target_completion {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.target_completion .legend {
+  display: flex;
+  gap: 20px;
+  flex-direction: column-reverse;
+  font-weight: 700;
+}
+
+.legend .legend_item {
+  font-size: 15px;
+}
+
+.target_completion .chart_wrapper {
+  width: 200px;
+  height: 200px;
+}
+
+@media (min-width: 1800px) {
+  .legend .legend_item {
+    font-size: 16px;
+  }
+
+  .target_completion .chart_wrapper {
+    width: 220px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .legend .legend_item {
+    font-size: 14px;
+  }
+
+  .target_completion .chart_wrapper {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .legend .legend_item {
+    font-size: 13px;
+  }
+  .target_completion .chart_wrapper {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 991px) {
+  .legend .legend_item {
+    font-size: 16px;
+  }
+
+  .target_completion .chart_wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 567px) {
+  .target_completion .legend {
+    gap: 10px;
+  }
+
+  .legend .legend_item {
+    font-size: 15px;
+  }
+
+  .target_completion .chart_wrapper {
+    height: 160px;
+    width: 160px;
+  }
+}

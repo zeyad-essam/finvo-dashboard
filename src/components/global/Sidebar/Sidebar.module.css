@@ -23,15 +23,15 @@
 }
 
 .sibebar_header {
-  padding: 50px 0 30px;
+  padding: 50px 20px 30px;
 }
 
 .sibebar_header a {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 15px;
   color: #3b96ec;
+  width: 230px;
 }
 
 .sibebar_header .image_wrapper {

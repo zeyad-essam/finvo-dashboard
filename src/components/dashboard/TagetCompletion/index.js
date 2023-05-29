@@ -4,7 +4,7 @@ import { ResponsiveRadialBar } from "@nivo/radial-bar";
 
 import Card from "../../ui/Card";
 
-import styles from "./TagetCompletion.module.css";
+import styles from "./TargetCompletion.module.css";
 
 const data = [
   {
@@ -23,7 +23,7 @@ const data = [
       {
         x: "Catering",
         y: 38,
-        color: "#aec4d9",
+        color: "#9bb2c7",
       },
     ],
   },
@@ -49,29 +49,41 @@ const data = [
   },
 ];
 
-const TagetCompletion = () => {
+const TargetCompletion = () => {
   return (
     <Card title="Target Completion">
-      <div style={{ height: 200 }}>
-        <ResponsiveRadialBar
-          data={data}
-          valueFormat=" >-.2f"
-          endAngle={360}
-          colors={{ datum: "data.color" }}
-          innerRadius={0.4}
-          padding={0.2}
-          cornerRadius={12}
-          margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
-          enableRadialGrid={false}
-          enableCircularGrid={false}
-          radialAxisStart={null}
-          circularAxisOuter={null}
-          legends={[]}
-          maxValue={100}
-        />
+      <div className={styles.target_completion}>
+        <div className={styles.legend}>
+          {data.map((target) => (
+            <div
+              className={styles.legend_item}
+              style={{ color: target.data[0].color }}
+            >
+              {target.id}: {target.data[0].y}%
+            </div>
+          ))}
+        </div>
+        <div className={styles.chart_wrapper}>
+          <ResponsiveRadialBar
+            data={data}
+            valueFormat=" >-.2f"
+            endAngle={360}
+            colors={{ datum: "data.color" }}
+            innerRadius={0.4}
+            padding={0.2}
+            cornerRadius={12}
+            margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
+            enableRadialGrid={false}
+            enableCircularGrid={false}
+            radialAxisStart={null}
+            circularAxisOuter={null}
+            legends={[]}
+            maxValue={100}
+          />
+        </div>
       </div>
     </Card>
   );
 };
 
-export default TagetCompletion;
+export default TargetCompletion;

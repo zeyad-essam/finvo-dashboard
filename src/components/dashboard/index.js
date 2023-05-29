@@ -9,6 +9,8 @@ import ValuesView from "./ValuesView";
 import ValueState from "../ui/ValueState";
 import Financials from "./Financials";
 import Metrics from "./Metrics";
+import Traffic from "./Trafic";
+import TargetCompletion from "./TagetCompletion";
 
 const Dashboard = () => {
   return (
@@ -90,6 +92,24 @@ const Dashboard = () => {
       </div>
       <div className={styles.metrics}>
         <Metrics />
+      </div>
+      <div className={styles.traffic}>
+        <Traffic />
+      </div>
+      <div className={styles.target_completion}>
+        <TargetCompletion />
+      </div>
+      <div className={styles.average}>
+        <StatCard
+          title="Avg. queue time"
+          value="7m 34s"
+          stat={{ decrease: true, value: 0.2 }}
+        />
+        <StatCard
+          title="Avg. Queue Length"
+          value="4.64"
+          stat={{ increase: true, value: 1.2 }}
+        />
       </div>
     </div>
   );

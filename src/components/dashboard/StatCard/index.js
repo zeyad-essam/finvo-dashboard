@@ -5,8 +5,9 @@ import styles from "./StatCard.module.css";
 
 const StatCard = ({ title, value, stat }) => {
   return (
-    <Card title={title}>
+    <Card>
       <div className={styles.stat_card}>
+        <h3>{title}</h3>
         <h2>{value}</h2>
         <ValueState
           value={stat.value}

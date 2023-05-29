@@ -4,8 +4,17 @@
   gap: 15px;
 }
 
+.stat_card h3 {
+  color: #777;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
 @media (max-width: 567px) {
   .stat_card {
+    text-align: center;
     gap: 10px;
   }
 }

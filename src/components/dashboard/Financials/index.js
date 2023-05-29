@@ -126,7 +126,7 @@ const Financials = () => {
           </div>
         </div>
         <div className={styles.table}>
-          <h3>Outstanding Recievables</h3>
+          <h3>Outstanding Payables</h3>
           <div className={styles.table_head}>
             <div className={styles.table_row}>
               <span>Customer</span>

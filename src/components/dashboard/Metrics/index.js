@@ -35,7 +35,7 @@ const Metrics = () => {
                 <div className={styles.table_wrapper}>
                   <table>
                     <tr>
-                      <th colspan="3">ACTUAL</th>
+                      <th colspan="3">Forecast</th>
                     </tr>
                     <tr>
                       <th>JUL</th>
