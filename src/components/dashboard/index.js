@@ -7,6 +7,8 @@ import StatCard from "./StatCard";
 import SalesTarget from "./SalesTarget";
 import ValuesView from "./ValuesView";
 import ValueState from "../ui/ValueState";
+import Financials from "./Financials";
+import Metrics from "./Metrics";
 
 const Dashboard = () => {
   return (
@@ -82,6 +84,12 @@ const Dashboard = () => {
             </div>
           </ValuesView>
         </div>
+      </div>
+      <div className={styles.recievables_and_payables}>
+        <Financials />
+      </div>
+      <div className={styles.metrics}>
+        <Metrics />
       </div>
     </div>
   );

@@ -14,18 +14,28 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 
 import styles from "./Topbar.module.css";
 
-const Topbar = ({ toggleSidebar, sidebarIsBroken }) => {
+const Topbar = ({ toggleSidebar, toggleSidebarCollapse, sidebarIsBroken }) => {
   const searchFormSubmitHandler = (e) => {
     e.preventDefault();
   };
 
   return (
     <div className={styles.top_bar}>
-      {sidebarIsBroken && (
+      {sidebarIsBroken ? (
         <div className={styles.toggle_button}>
           <IconButton
             color="#000"
             onClick={toggleSidebar}
+            style={{ padding: "5px" }}
+          >
+            <MenuIcon style={{ color: "#000", fontSize: 28 }} />
+          </IconButton>
+        </div>
+      ) : (
+        <div className={styles.toggle_button}>
+          <IconButton
+            color="#000"
+            onClick={toggleSidebarCollapse}
             style={{ padding: "5px" }}
           >
             <MenuIcon style={{ color: "#000", fontSize: 28 }} />

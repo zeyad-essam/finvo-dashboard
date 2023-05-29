@@ -1,0 +1,75 @@
+.metrics_wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+/* width */
+.metrics_wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+.metrics_wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.metrics_wrapper::-webkit-scrollbar-thumb {
+  background: #f16822;
+  border-radius: 2px;
+}
+
+.metrics_table {
+  min-width: 600px;
+}
+
+.metrics_table,
+.metrics_table table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.metrics_table .groupHeader {
+  padding: 4px;
+}
+
+.metrics_table .groupHeader .table_wrapper {
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.metrics_table .groupHeader.actual .table_wrapper {
+  background-color: #004e98;
+}
+
+.metrics_table .groupHeader.forecast .table_wrapper {
+  background-color: #f16822;
+}
+
+.metrics_table .groupHeader th {
+  font-weight: 400;
+}
+
+.metrics_table .groupHeader tr:first-child th {
+  padding-bottom: 10px;
+}
+
+.metrics_table tbody tr {
+  border-bottom: 1px solid #d8cccc;
+  color: #666;
+  font-weight: 600;
+}
+
+.metrics_table tbody td {
+  padding: 8px;
+}
+
+.metrics_table tbody td:first-child {
+  text-align: left;
+  font-weight: 400;
+}

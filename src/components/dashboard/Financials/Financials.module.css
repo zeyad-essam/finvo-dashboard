@@ -1,0 +1,104 @@
+.tables_wrapper {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.tables_wrapper::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: calc(100% - 20px);
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #c0c0c0;
+}
+
+.tables_wrapper .table {
+  width: 50%;
+}
+
+.tables_wrapper .table h3 {
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.table .table_head {
+  background-color: #edf2f8;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.table .table_body {
+  height: 150px;
+  overflow: auto;
+}
+
+/* width */
+.table .table_body::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.table .table_body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.table .table_body::-webkit-scrollbar-thumb {
+  background: #e2a07f;
+  border-radius: 2px;
+}
+
+.table .table_footer .total_amount {
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.table .table_footer .view_more {
+  cursor: pointer;
+}
+
+.table .table_footer .view_more:hover {
+  color: #000;
+}
+
+.table .table_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 8px;
+}
+
+.table .table_row span {
+  font-weight: 600;
+  color: #777;
+  font-size: 15px;
+}
+
+.table .table_row .due_in_one_recieve {
+  color: green;
+}
+
+.table .table_row .due_in_one_pay {
+  color: red;
+}
+
+@media (max-width: 767px) {
+  .tables_wrapper {
+    flex-direction: column;
+  }
+
+  .tables_wrapper .table {
+    width: 100%;
+  }
+
+  .tables_wrapper::after {
+    height: 0;
+    width: 100%;
+    top: 50%;
+  }
+}

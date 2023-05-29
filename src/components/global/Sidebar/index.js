@@ -46,6 +46,7 @@ const hexToRgba = (hex, alpha) => {
 
 const SideBar = ({
   sidebarIsToggled,
+  sidebarIsCollapsed,
   setSidebarIsToggled,
   setSidebarIsBroken,
 }) => {
@@ -71,18 +72,12 @@ const SideBar = ({
         color: sideBarColors.menu.disabled.color,
       },
       "&:hover": {
-        backgroundColor: hexToRgba(
-          sideBarColors.menu.hover.backgroundColor,
-          0.7
-        ),
+        backgroundColor: "transparent",
         color: sideBarColors.menu.hover.color,
       },
       "&:hover .ps-menu-icon": {
         color: sideBarColors.menu.hover.color,
       },
-      height: "40px",
-      paddingLeft: "10px",
-      paddingRight: "10px",
     },
     label: {
       color: sideBarColors.menu.label,
@@ -94,6 +89,7 @@ const SideBar = ({
 
   return (
     <Sidebar
+      collapsed={sidebarIsCollapsed}
       toggled={sidebarIsToggled}
       onBackdropClick={() => setSidebarIsToggled(false)}
       onBreakPoint={setSidebarIsBroken}
@@ -112,7 +108,7 @@ const SideBar = ({
             <div className={styles.image_wrapper}>
               <img src="/finvo.jpeg" alt="finvo.co" />
             </div>
-            <span>Finvo</span>
+            {!sidebarIsCollapsed && <span>Finvo</span>}
           </Link>
         </div>
         <Menu menuItemStyles={menuItemStyles}>

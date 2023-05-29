@@ -48,14 +48,12 @@
   gap: 15px;
 }
 
-@media (min-width: 1800px) {
-  .orders_and_payments {
-    grid-column: span 5;
-  }
+.recievables_and_payables {
+  grid-column: span 6;
+}
 
-  .target {
-    grid-column: span 5;
-  }
+.metrics {
+  grid-column: span 6;
 }
 
 @media (max-width: 1500px) {
@@ -89,6 +87,11 @@
   .orders_and_payments .cutomer_satisfaction {
     width: auto;
     grid-column: span 4;
+  }
+
+  .recievables_and_payables,
+  .metrics {
+    grid-column: span 12;
   }
 }
 
