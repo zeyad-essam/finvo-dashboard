@@ -61,11 +61,11 @@
 }
 
 .target_completion {
-  grid-column: span 3;
+  grid-column: span 4;
 }
 
 .average {
-  grid-column: span 3;
+  grid-column: span 2;
   display: grid;
   gap: 15px;
   grid-template-rows: 1fr 1fr;
@@ -124,6 +124,22 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .traffic {
+    grid-column: span 6;
+  }
+
+  .target_completion {
+    grid-column: span 6;
+  }
+
+  .average {
+    grid-column: span 12;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 991px) {
   .traffic {
     grid-column: span 12;
@@ -135,6 +151,8 @@
 
   .average {
     grid-column: span 6;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
@@ -165,8 +183,6 @@
 
   .average {
     grid-column: span 12;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
   }
 }
 
